@@ -1,0 +1,36 @@
+{
+  "name": "showcase-cucumber-framework-api-and-ui-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "delete_cucumber_json_files": "del /Q cypress\\cucumber-json\\*",
+    "generate_html_report": "node cucumber-html-report.js",
+    "API_run_tests_headless": "npx cypress run --spec cypress/e2e/API_Test_Cases/features --headless",
+    "API_run_tests_headed": "npx cypress run --spec cypress/e2e/API_Test_Cases/features --headed --browser edge",
+    "UI_run_tests_headless": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features --headless",
+    "UI_run_tests_headed": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features --headed --browser chrome",
+    "all_tests_headed": "npx cypress run --headed --browser chrome",
+    "all_tests_headless": "npx cypress run --headless",
+    "UI_run_login_headed": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features/loginTest.feature --headed --browser chrome",
+    "UI_run_login_headless": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features/loginTest.feature --headless"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.9.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/**/*scenario_steps",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^3.3.0"
+  }
+}
