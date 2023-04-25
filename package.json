@@ -11,6 +11,7 @@
     "UI_run_tests_headless": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features --headless",
     "UI_run_tests_headed": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features --headed --browser chrome",
     "all_tests_headed": "npx cypress run --headed --browser chrome",
+    "all_tests": "npx cypress run",
     "all_tests_headless": "npx cypress run --headless",
     "UI_run_login_headed": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features/loginTest.feature --headed --browser chrome",
     "UI_run_login_headless": "npx cypress run --spec cypress/e2e/UI_Test_Cases/features/loginTest.feature --headless"
