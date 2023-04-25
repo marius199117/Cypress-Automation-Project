@@ -13,4 +13,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0 # use the explicit version number
         with:
-          command: npm run all_tests_headless
+          command: npm run API_run_tests_headless
